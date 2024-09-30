@@ -1,0 +1,228 @@
+@import url("fonts.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    text-decoration: inherit;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+svg {
+    height: auto;
+    width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* sr_only */
+
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+/* variables */
+
+:root {
+    --clr-red: #ED1C24;
+}
+
+/* design */
+
+:root { font-family: "Inter", sans-serif; }
+@supports (font-variation-settings: normal) {
+    :root { font-family: "InterVariable", sans-serif; font-optical-sizing: auto; }
+}
+
+/* typography */
+
+.italic {
+    font-style: italic;
+}
+
+/* header */
+
+header {
+    color: white;
+    min-height: 100vh;
+    background-image: url("images/hero.jpeg");
+    background-position: bottom 45% right;
+}
+
+.header {
+    padding: 1rem;
+    max-width: calc(600px - 2rem);
+    margin-inline: auto;
+    background-color: var(--clr-red);
+    position: sticky;
+    top: 0;
+}
+
+.header h1, .header p {
+    font-family: "Libre Calson Condensed", serif;
+    text-transform: uppercase;
+}
+
+.header h1 span {
+    display: block;
+    font-weight: bold;
+    letter-spacing: -0.07ch;
+    line-height: 90%;
+}
+
+.header h1 span:not(:nth-child(3)) {
+    font-size: 3.5rem;
+}
+
+.header h1 span:nth-child(3) {
+    font-size: 5rem;
+    line-height: 85%;
+}
+
+.header h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.header p {
+    font-size: 1.3rem;
+    text-align: right;
+    margin-top: 1.5rem;
+    max-width: 50%;
+    margin-left: auto;
+}
+
+@media (width < 32rem) {
+    .header p {
+        max-width: 100%;
+        text-wrap: balance;
+    }
+}
+
+/* sections */
+
+section h2, h3 {
+    text-transform: uppercase;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-content {
+    max-width: 600px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+    margin-block: 1rem;
+}
+
+.section-content p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.section-content > * + * {
+    margin-top: 1rem;
+}
+
+.images {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    margin-bottom: 1rem;
+    margin-inline: 1rem;
+}
+
+.images img {
+    max-height: 70vh;
+}
+
+.border {
+    max-width: 600px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+.border div {
+    height: 1px;
+    background-color: black;
+}
+
+@media (width > 72rem) {
+    header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .header {
+        margin-inline: 1rem auto;
+        max-width: 100%;
+        width: calc(50% - 1.5rem);
+        top: 1rem;
+    }
+    .section-content {
+        margin-left: 0;
+        max-width: 80ch;
+    }
+    .border {
+        max-width: 80ch;
+        margin-left: 0;
+    }
+}
+
+.references {
+    max-width: 600px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+    margin-block: 1rem;
+}
+
+.references ul {
+    margin-top: 1rem;
+    list-style: none;
+    line-height: 1.5;
+}
+
+.references ul li {
+    margin-left: 4ch;
+    text-indent: -4ch;
+}
+
+.references a {
+    color: #000000;
+    text-decoration: underline;
+}
