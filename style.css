@@ -196,7 +196,7 @@ section h2 {
         width: calc(50% - 1.5rem);
         top: 1rem;
     }
-    .section-content {
+    .section-content, footer .references {
         margin-left: 0;
         max-width: 80ch;
     }
@@ -228,4 +228,8 @@ section h2 {
     color: #000000;
     text-decoration: underline;
     word-break: break-all;
+}
+
+.youtube-embed {
+    width: 100%;
 }
