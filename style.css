@@ -187,6 +187,10 @@ section h3 {
     max-height: 70vh;
 }
 
+.images.single {
+    justify-content: center;
+}
+
 .border {
     max-width: 600px;
     padding-inline: 1rem;
@@ -216,6 +220,9 @@ section h3 {
     .border {
         max-width: 80ch;
         margin-left: 0;
+    }
+    .images.single {
+        justify-content: left;
     }
 }
 
