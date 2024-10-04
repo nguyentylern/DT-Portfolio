@@ -78,6 +78,7 @@ header {
     min-height: 100vh;
     background-image: url("images/hero.jpeg");
     background-position: bottom 45% right;
+    background-size: cover;
 }
 
 .header {
